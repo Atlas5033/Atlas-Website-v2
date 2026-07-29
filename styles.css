@@ -1095,15 +1095,20 @@ grid-template-columns:1fr;
     gap: 34px;
   }
 
+  .provider-copy {
+    order: 1;
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  .provider-photo {
+    order: 2;
+  }
+
   .provider-photo img {
     max-width: 300px;
     height: 400px;
     margin-left: 0;
-  }
-
-  .provider-copy {
-    max-width: 100%;
-    padding-top: 0;
   }
 
 }
