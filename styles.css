@@ -925,67 +925,306 @@ grid-template-columns:1fr;
     padding: 28px;
   }
 }
+
 /* --------------------------------------------------
    Services CTA
 -------------------------------------------------- */
 
 .services-cta {
-
-    max-width: 760px;
-
-    margin: 90px auto 0;
-
-    padding-top: 60px;
-
-    border-top: 1px solid rgba(11,54,88,.10);
-
+    max-width: 720px;
+    margin: 130px auto 40px;   /* was 110px auto 0 */
+    padding-top: 80px;         /* was 72px */
     text-align: center;
-
 }
 
-.cta-eyebrow{
-
-    margin:0;
-
-    color:var(--green-dark);
-
-    text-transform:uppercase;
-
-    letter-spacing:.12em;
-
-    font-size:.78rem;
-
-    font-weight:700;
-
+.cta-eyebrow {
+    margin: 0;
+    color: var(--green-dark);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: .78rem;
+    font-weight: 700;
 }
 
-.services-cta h2{
-
-    margin:14px 0 18px;
-
-    color:var(--navy-dark);
-
+.services-cta h2 {
+    margin: 14px 0 22px;
+    color: var(--navy-dark);
     font-family:
         Georgia,
         "Times New Roman",
         serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 1.15;
+}
 
-    font-size:clamp(2rem,3vw,2.8rem);
+.cta-text {
+    max-width: 600px;
+    margin: 0 auto 38px;
+    color: var(--muted-text);
+    font-size: 1.02rem;
+    line-height: 1.8;
+}
 
-    line-height:1.15;
+/* About Atlas */
+
+/* --------------------------------------------------
+   Philosophy and provider section
+-------------------------------------------------- */
+
+.about-section {
+  padding: 104px 0 170px;
+  background: var(--white);
+}
+
+.about-intro {
+  margin-bottom: 52px;
+  text-align: center;
 
 }
 
-.cta-text{
+.about-lead {
+  margin-inline: auto;
+}
 
-    max-width:620px;
+.about-section .section-eyebrow {
+  margin: 0 0 12px;
+  color: var(--green-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
 
-    margin:0 auto 34px;
+.about-intro h2 {
+  max-width: 720px;
+  margin: 0 auto 22px;
+  color: var(--navy-dark);
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.12;
+}
 
-    color:var(--muted-text);
+.about-lead {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--muted-text);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
 
-    font-size:1.02rem;
+.provider-grid {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+  padding-bottom: 70px;
+}
 
-    line-height:1.7;
 
+.provider-photo img {
+  width: 100%;
+  max-width: 320px;
+  height: 470px;
+  margin: 0 auto;
+  border-radius: 14px;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.provider-copy {
+  max-width: 760px;
+  padding-top: 0;
+}
+
+.provider-copy h3 {
+  margin: 0 0 22px;
+  color: var(--navy-dark);
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 1.55rem;
+  line-height: 1.25;
+}
+
+.provider-copy > p {
+  margin: 0 0 18px;
+  color: var(--muted-text);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.provider-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+  padding-bottom: 18px;
+}
+
+.provider-credentials span {
+  padding: 9px 14px;
+  color: var(--navy-dark);
+  background: #f8f7f3;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 800px) {
+  .about-section {
+    padding: 64px 0 82px;
+  }
+
+  .about-intro {
+    margin-bottom: 44px;
+    text-align: left;
+  }
+
+  .about-lead {
+    margin-inline: 0;
+  }
+
+  .provider-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .provider-photo img {
+    max-width: 300px;
+    height: 400px;
+    margin-left: 0;
+  }
+
+  .provider-copy {
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+}
+
+  
+/* --------------------------------------------------
+   Footer
+-------------------------------------------------- */
+
+.site-footer {
+  padding: 96px 0 34px;
+  background: #f8f7f3;
+  border-top: 1px solid rgba(11, 54, 88, 0.08);
+}
+
+
+.footer-message {
+  max-width: 780px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.footer-eyebrow {
+  margin: 0 0 12px;
+  color: var(--green-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-message h2 {
+  margin: 0;
+  color: var(--navy-dark);
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.footer-description {
+  max-width: 650px;
+  margin: 28px auto 0;
+  color: var(--muted-text);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.footer-identity {
+  margin: 24px 0 0;
+  color: var(--navy-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.footer-identity span {
+  margin-inline: 7px;
+  color: var(--green);
+}
+
+.footer-bottom {
+  padding-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 0.82rem;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 22px;
+}
+
+.footer-navigation a {
+  color: var(--muted-text);
+  font-size: 0.82rem;
+}
+
+.footer-navigation a:hover,
+.footer-navigation a:focus-visible {
+  color: var(--navy-dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    padding: 60px 0 28px;
+  }
+
+  .footer-message {
+    margin-bottom: 48px;
+    text-align: left;
+  }
+
+  .footer-description {
+    margin-inline: 0;
+  }
+
+  .footer-identity {
+    line-height: 1.8;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  .footer-navigation {
+    justify-content: flex-start;
+    gap: 14px 20px;
+  }
 }
