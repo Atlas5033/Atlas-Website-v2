@@ -1134,9 +1134,7 @@ grid-template-columns:1fr;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-
-.footer-message h2 {
-  margin: 0;
+.section-headline {
   color: var(--navy-dark);
   font-family:
     Georgia,
@@ -1144,6 +1142,10 @@ grid-template-columns:1fr;
     serif;
   font-size: clamp(2rem, 3vw, 2.8rem);
   line-height: 1.15;
+}
+
+.footer-message h2 {
+  margin: 0;
 }
 
 .footer-description {
@@ -1227,4 +1229,90 @@ grid-template-columns:1fr;
     justify-content: flex-start;
     gap: 14px 20px;
   }
+}
+.professionals-section {
+  padding: 90px 0;
+  background: #f8fafc;
+}
+
+.professional-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin: 48px 0;
+}
+
+.professional-card {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+
+.professional-card h3 {
+  margin-bottom: 18px;
+}
+
+.professional-card ul {
+  padding-left: 20px;
+}
+
+.professional-card li {
+  margin-bottom: 10px;
+}
+
+.professional-cta {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.professional-cta p {
+  margin: 20px 0 32px;
+}
+
+.professional-note {
+  margin-top: 24px;
+  font-size: 0.95rem;
+  color: #5b6470;
+}
+
+.professional-supporting-text {
+  max-width: 850px;
+  margin: 1rem 0 3rem;
+  color: #5f6b7a;
+}
+
+/* ==========================================
+   Thank You Pages
+========================================== */
+
+.thank-you-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 1.5rem;
+  text-align: center;
+}
+
+.thank-you-page .container {
+  width: 100%;
+}
+
+.thank-you-page .section-headline {
+  margin: 0.5rem 0 1.25rem;
+}
+
+.thank-you-page .section-intro {
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+}
+
+.thank-you-text {
+  max-width: 700px;
+  margin: 0 auto 1.25rem;
+}
+
+.thank-you-secondary-text {
+  margin-bottom: 2.5rem;
 }
