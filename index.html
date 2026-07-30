@@ -708,6 +708,98 @@
   </div>
 </section>
 
+
+<section class="faq-section" id="faq">
+
+  <div class="container">
+
+    <p class="section-eyebrow">
+      Frequently Asked Questions
+    </p>
+
+    <h2 class="section-headline">
+      Answers to Common Questions
+    </h2>
+
+    <p class="section-intro">
+      Starting treatment can raise a lot of questions. Here are answers to
+      some of the ones we hear most often.
+    </p>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>Do you prescribe Suboxone® (buprenorphine)?</summary>
+        <p>
+          Yes. Medication for opioid use disorder is offered when clinically
+          appropriate as part of a comprehensive treatment plan.
+        </p>
+
+      </details><details class="faq-item">
+        <summary>Do I need a referral?</summary>
+        <p>
+          No. Most patients can schedule directly without a referral.
+        </p>
+      </details>
+
+  
+      <details class="faq-item">
+        <summary>Do you accept insurance?</summary>
+        <p>
+          Yes. Atlas Recovery is currently in-network with Anthem, Aetna, and
+          eligible Cigna Healthcare behavioral health plans administered through
+          Evernorth. Additional Colorado plans are being added.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How soon can I be seen?</summary>
+        <p>
+          Appointment availability varies, but we strive to schedule new
+          patients as quickly as possible.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are appointments virtual?</summary>
+        <p>
+          Yes. All appointments are provided through secure telehealth for
+          patients located in Colorado.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if I'm not sure treatment is right for me?</summary>
+        <p>
+          That's perfectly okay. Schedule a free consultation and we
+          can discuss your concerns, answer questions, and determine whether
+          Atlas Recovery is the right fit.
+        </p>
+      </details>
+
+      <details class="faq-item">
+  <summary>Can you treat patients anywhere in Colorado?</summary>
+  <p>
+    Yes. Atlas Recovery provides secure telehealth services to patients
+    located throughout Colorado. You must be physically located in Colorado
+    at the time of your appointment.
+  </p>
+</details>
+
+<details class="faq-item">
+  <summary>Will my information remain confidential?</summary>
+  <p>
+    Yes. Your care is protected by HIPAA and other applicable privacy laws.
+    Information is shared only with your permission or when disclosure is
+    required or permitted by law.
+  </p>
+</details>
+
+    </div>
+
+  </div>
+
+</section>
   </div>
 </section>
   </main>
@@ -748,6 +840,29 @@
 
   </div>
 </footer>
+
+<script>
+  const menuButton = document.querySelector(".mobile-menu-button");
+  const navigation = document.querySelector(".main-navigation");
+
+  menuButton.addEventListener("click", () => {
+    const menuIsOpen = navigation.classList.toggle("is-open");
+
+    menuButton.setAttribute("aria-expanded", menuIsOpen);
+    menuButton.setAttribute(
+      "aria-label",
+      menuIsOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+  });
+
+  navigation.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navigation.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation menu");
+    });
+  });
+</script>
 
 </body>
 </html>
