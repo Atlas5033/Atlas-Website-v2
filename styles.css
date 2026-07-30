@@ -1589,3 +1589,22 @@ grid-template-columns:1fr;
   padding: 0 1.5rem 1.5rem;
   line-height: 1.7;
 }
+/* ==========================================
+   Mobile hero and header refinements
+========================================== */
+
+@media (max-width: 768px) {
+
+  /* Give the Atlas brand more presence */
+  .site-logo {
+    width: auto;
+    height: 72px;
+  }
+
+  /* Slightly reduce the oversized mobile headline */
+  .hero h1 {
+    font-size: clamp(3.35rem, 13.5vw, 4.35rem);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+  }
+}
