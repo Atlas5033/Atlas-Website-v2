@@ -1316,3 +1316,182 @@ grid-template-columns:1fr;
 .thank-you-secondary-text {
   margin-bottom: 2.5rem;
 }
+
+/* ==========================================
+   Insurance & Self-Pay
+========================================== */
+
+.insurance-section {
+  padding: 6rem 1.5rem;
+  background-color: var(--off-white, #f7f6f2);
+}
+
+.insurance-section .section-eyebrow,
+.insurance-section .section-headline,
+.insurance-section .section-intro {
+  text-align: center;
+}
+
+.insurance-section .section-headline {
+  margin: 0.5rem auto 1.25rem;
+}
+
+.insurance-section .section-intro {
+  max-width: 780px;
+  margin: 0 auto 3rem;
+}
+
+.insurance-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.insurance-card {
+  padding: 2.25rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(18, 47, 66, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(18, 47, 66, 0.06);
+}
+
+.insurance-card h3 {
+  margin: 0 0 1rem;
+  color: var(--navy-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+  line-height: 1.2;
+}
+
+.insurance-card > p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.insurance-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.insurance-logo {
+  width: 130px;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(18, 47, 66, 0.12);
+  border-radius: 10px;
+}
+
+.insurance-logo img {
+  display: block;
+  width: 100%;
+  max-width: 105px;
+  max-height: 42px;
+  object-fit: contain;
+}
+
+.insurance-note {
+  font-size: 0.95rem;
+  color: var(--text-muted, #58656d);
+}
+
+.pricing-list {
+  margin-top: 1.5rem;
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(18, 47, 66, 0.12);
+}
+
+.pricing-item:first-child {
+  border-top: 1px solid rgba(18, 47, 66, 0.12);
+}
+
+.pricing-item h4 {
+  margin: 0 0 0.3rem;
+  color: var(--navy-dark);
+  font-size: 1.05rem;
+}
+
+.pricing-item p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-muted, #58656d);
+}
+
+.pricing-amount {
+  flex-shrink: 0;
+  color: var(--navy-dark);
+  font-weight: 700;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.insurance-cta {
+  max-width: 760px;
+  margin: 3rem auto 0;
+  text-align: center;
+}
+
+.insurance-cta p {
+  margin: 0 auto 1.5rem;
+  line-height: 1.7;
+}
+
+.coverage-disclaimer {
+  max-width: 820px;
+  margin: 2.25rem auto 0;
+  text-align: center;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-muted, #58656d);
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .insurance-section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .insurance-content {
+    grid-template-columns: 1fr;
+  }
+
+  .insurance-card {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .insurance-logos {
+    gap: 0.75rem;
+  }
+
+  .insurance-logo {
+    width: 105px;
+    min-height: 64px;
+  }
+
+  .pricing-item {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .pricing-amount {
+    font-size: 1.05rem;
+  }
+}
