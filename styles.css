@@ -1608,3 +1608,25 @@ grid-template-columns:1fr;
     letter-spacing: -0.025em;
   }
 }
+.thank-you-page .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.25rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.thank-you-page .button-primary {
+  background-color: #0b4f6c;
+  color: #ffffff;
+}
+
+.thank-you-page .button-primary:hover,
+.thank-you-page .button-primary:focus {
+  opacity: 0.9;
+}
