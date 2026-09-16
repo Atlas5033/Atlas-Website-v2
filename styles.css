@@ -1086,26 +1086,32 @@ grid-template-columns:1fr;
   }
 
   .provider-grid {
-    grid-template-columns: 1fr;
-    gap: 34px;
-  }
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "copy"
+    "photo";
+  gap: 34px;
+  width: 100%;
+}
 
-  .provider-copy {
-    order: 1;
-    max-width: 100%;
-    padding-top: 0;
-  }
+.provider-copy {
+  grid-area: copy;
+  max-width: 100%;
+  min-width: 0;
+  padding-top: 0;
+}
 
-  .provider-photo {
-    order: 2;
-  }
+.provider-photo {
+  grid-area: photo;
+  width: 100%;
+}
 
-  .provider-photo img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-left: 0;
-  }
+.provider-photo img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
 
 }
 
