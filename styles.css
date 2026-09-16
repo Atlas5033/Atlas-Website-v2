@@ -1101,8 +1101,9 @@ grid-template-columns:1fr;
   }
 
   .provider-photo img {
+    width: 100%;
     max-width: 300px;
-    height: 400px;
+    height: auto;
     margin-left: 0;
   }
 
