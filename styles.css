@@ -1100,47 +1100,67 @@ grid-template-columns:1fr;
 
 @media (max-width: 800px) {
   .about-section {
-    padding: 64px 0 82px;
+    padding: 48px 0 64px;
   }
 
   .about-intro {
-    margin-bottom: 44px;
-    text-align: left;
+    margin-bottom: 0;
+    text-align: center;
   }
 
   .about-lead {
-    margin-inline: 0;
+    margin-inline: auto;
   }
 
   .provider-grid {
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-areas:
-    "copy"
-    "photo";
-  gap: 34px;
-  width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "heading"
+      "photo"
+      "copy";
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 28px;
+    padding-bottom: 0;
+  }
+
+  .provider-heading {
+    grid-area: heading;
+    width: 100%;
+    text-align: center;
+  }
+
+  .provider-photo {
+    grid-area: photo;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .provider-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .provider-copy {
+    grid-area: copy;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .provider-copy > p {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
-.provider-copy {
-  grid-area: copy;
-  max-width: 100%;
-  min-width: 0;
-  padding-top: 0;
-}
 
-.provider-photo {
-  grid-area: photo;
-  width: 100%;
-}
-
-.provider-photo img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin: 0;
-}
-
-}
 
   
 /* --------------------------------------------------
