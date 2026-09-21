@@ -392,11 +392,13 @@ a {
   text-align: center;
 }
 
-.eyebrow {
-  margin: 0 0 8px;
+.section-eyebrow {
+  margin: 0 0 12px;
   color: var(--green-dark);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.76rem;
   font-weight: 800;
+  line-height: 1.2;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -471,6 +473,7 @@ a {
   display: flex;
   align-items: center;
   overflow: hidden;
+   padding-left: clamp(32px, 6vw, 96px);
 
   background-image:
     linear-gradient(
@@ -933,8 +936,8 @@ grid-template-columns:1fr;
 .services-cta {
     max-width: 720px;
     margin: 130px auto 40px;   /* was 110px auto 0 */
-    padding-top: 80px;         /* was 72px */
-    text-align: center;
+   text-align: center;
+  padding: 72px 0 78px;
 }
 
 .cta-eyebrow {
@@ -971,26 +974,32 @@ grid-template-columns:1fr;
    Philosophy and provider section
 -------------------------------------------------- */
 
+.philosophy-section {
+  padding: 80px 0 58px;
+  background: #f8f7f3;
+}
+
 .about-section {
-  padding: 104px 0 170px;
+  padding: 38px 0 100px;
   background: var(--white);
 }
 
 .about-intro {
-  margin-bottom: 52px;
+  margin-bottom: 0;
   text-align: center;
-
 }
 
 .about-lead {
   margin-inline: auto;
 }
 
-.about-section .section-eyebrow {
+.section-eyebrow {
   margin: 0 0 12px;
   color: var(--green-dark);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.76rem;
   font-weight: 800;
+  line-height: 1.2;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1016,26 +1025,32 @@ grid-template-columns:1fr;
 }
 
 .provider-grid {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+
   display: grid;
   grid-template-columns: 340px minmax(0, 1fr);
-  grid-template-areas: "photo copy";
-  gap: 64px;
-  align-items: center;
+  grid-template-areas:
+    "heading heading"
+    "photo copy";
+  column-gap: 64px;
+  row-gap: 30px;
+  align-items: start;
   padding-bottom: 70px;
 }
 
-.provider-photo {
-  grid-area: photo;
+.provider-heading {
+  grid-area: heading;
+  text-align: center;
 }
 
-.provider-copy {
-  grid-area: copy;
-  max-width: 760px;
-  padding-top: 0;
+.provider-heading .section-eyebrow {
+  margin-bottom: 10px;
 }
 
-.provider-copy h3 {
-  margin: 0 0 22px;
+.provider-heading h3 {
+  margin: 0;
   color: var(--navy-dark);
   font-family:
     Georgia,
@@ -1043,6 +1058,18 @@ grid-template-columns:1fr;
     serif;
   font-size: 1.55rem;
   line-height: 1.25;
+}
+
+.provider-photo {
+  grid-area: photo;
+  margin-top: 0;
+}
+
+.provider-copy {
+  grid-area: copy;
+  max-width: 760px;
+  padding-top: 0;
+
 }
 
 .provider-copy > p {
