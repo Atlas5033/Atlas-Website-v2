@@ -638,15 +638,13 @@ a {
     gap: 13px;
   }
 
-    .reassurance-section {
+      .reassurance-section {
     padding: 44px 0;
   }
 
   .reassurance-inner {
     max-width: 100%;
-}
   }
-
 
   .why-atlas-section {
     padding: 56px 0 62px;
@@ -689,6 +687,7 @@ a {
   font-size: 0.98rem;
 }
 
+}
 /* --------------------------------------------------
    Journey Section
 -------------------------------------------------- */
@@ -696,6 +695,10 @@ a {
 .journey-section {
   padding: 52px 0 80px;
   background: #f8f7f3;
+}
+
+.journey-section > .container {
+  display: flow-root;
 }
 
 .journey-intro {
