@@ -14,6 +14,36 @@
   </url>
 
   <url>
+    <loc>https://atlasrecovery.health/education/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://atlasrecovery.health/education/is-suboxone-replacing-one-addiction-with-another/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://atlasrecovery.health/education/what-is-suboxone/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://atlasrecovery.health/education/buprenorphine-prevents-overdose/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://atlasrecovery.health/education/online-suboxone-treatment-colorado/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://atlasrecovery.health/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
