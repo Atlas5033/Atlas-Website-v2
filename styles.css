@@ -1814,11 +1814,27 @@ grid-template-columns:1fr;
 .article-layout{padding:4.5rem 0 6.5rem;display:grid;grid-template-columns:220px minmax(0,760px);justify-content:center;gap:clamp(3rem,7vw,7rem)}
 .article-toc{position:sticky;top:2rem;align-self:start;padding-top:.35rem}.article-toc>p{margin:0 0 1rem;color:var(--navy-dark);font-weight:800}.article-toc nav{display:grid;gap:.75rem;padding-left:1rem;border-left:2px solid #d7ddd0}.article-toc a{color:var(--muted-text);font-size:.88rem;line-height:1.35}.article-toc a:hover{color:var(--green-dark)}
 .article-body{min-width:0;font-size:1.05rem;line-height:1.78}.article-body p{margin:0 0 1.35rem}.article-body .article-lead{color:var(--navy-dark);font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;line-height:1.65}
+/* Keep citations and related-reading links recognizable within article text. */
+.article-body p a:not(.button),
+.article-body li a:not(.button) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+}
+.article-body p a:not(.button):hover,
+.article-body li a:not(.button):hover {
+  text-decoration-thickness: 2px;
+}
+.article-body a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
 .article-body h2{margin:3.75rem 0 1.15rem;color:var(--navy-dark);font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.75rem,3.2vw,2.45rem);line-height:1.2;scroll-margin-top:2rem}.article-body h3{margin:2.3rem 0 .8rem;color:var(--navy);font-size:1.25rem;line-height:1.35}.article-body ul,.article-body ol{margin:0 0 1.5rem;padding-left:1.4rem}.article-body li{margin-bottom:.55rem;padding-left:.25rem}
 .key-takeaways,.safety-callout,.medical-disclaimer{margin:2.75rem 0;padding:1.75rem 2rem;border-radius:10px}.key-takeaways{background:#eef1e9;border-left:5px solid var(--green)}.callout-label{margin:0 0 .75rem!important;color:var(--green-dark);font-size:.8rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}.key-takeaways ul{margin-bottom:0}
 .safety-callout{background:#f7f0e6;border:1px solid #e3d5c0}.safety-callout p:last-child,.medical-disclaimer p:last-child{margin-bottom:0}.link-note{color:var(--muted-text);font-size:.9rem;font-style:italic}
 .article-consultation{margin-top:4rem;padding:2.5rem;color:var(--white);background:var(--navy-dark);border-radius:12px}.article-consultation .section-eyebrow{color:#d9e2cc}.article-consultation h2{margin-top:.35rem;color:var(--white)}.article-consultation .button{margin-top:.65rem}
 .article-review,.article-sources{margin-top:3.5rem;padding-top:.25rem;border-top:1px solid var(--border)}.article-review dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.article-review dl div{padding:1rem 1.1rem;background:#f7f8f6;border-radius:7px}.article-review dt{color:var(--muted-text);font-size:.76rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.article-review dd{margin:.3rem 0 0;color:var(--navy-dark);font-weight:700}.article-sources a{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
 .medical-disclaimer{background:#f4f5f3;color:var(--muted-text);font-size:.92rem}.medical-disclaimer h2{margin-top:0;font-size:1.25rem}.article-return{margin-top:2.5rem;font-weight:800}
+@media(min-width:901px){.article-toc{max-height:calc(100vh - 4rem);overflow-y:auto}}
 @media(max-width:900px){.education-hero-inner,.article-layout{grid-template-columns:1fr}.article-grid{grid-template-columns:1fr}.article-card-featured{grid-row:auto;min-height:480px}.article-card-wide{grid-column:auto}.article-toc{position:static;padding:1.25rem;background:#f7f8f6;border-radius:8px}.article-toc nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.education-hero{padding:4rem 0}.education-hero-inner{gap:2.5rem}.education-cta-inner,.article-byline{align-items:flex-start;flex-direction:column}.education-cta-inner .button{width:100%}.article-meta{gap:.5rem;flex-direction:column;text-align:left}.article-layout{padding-top:2.75rem}.article-toc nav{grid-template-columns:1fr}.article-body{font-size:1rem}.key-takeaways,.safety-callout,.medical-disclaimer,.article-consultation{padding:1.35rem}.article-review dl{grid-template-columns:1fr}}
