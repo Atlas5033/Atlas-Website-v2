@@ -77,13 +77,15 @@
 
     .referral-steps {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 1.25rem;
       margin-top: 2.5rem;
+      padding-left: 0;
+      list-style: none;
     }
 
     .referral-step {
-      padding: 1.75rem;
+      padding: 1.5rem;
       background: #fff;
       border: 1px solid rgba(10, 49, 68, 0.10);
       border-radius: 10px;
@@ -107,16 +109,30 @@
       margin-top: 0;
     }
 
-    .professional-callout {
-      max-width: 900px;
-      margin-top: 2.5rem;
-      padding: 1.5rem 1.75rem;
-      border-left: 4px solid #587744;
-      background: #f5f2ea;
+    .professional-trust-layout {
+      display: grid;
+      grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+      align-items: start;
+      gap: 3rem;
     }
 
-    .professional-callout p:last-child {
-      margin-bottom: 0;
+    .professional-headshot {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .professional-trust-copy .section-headline {
+      margin-top: 0;
+    }
+
+    .professional-collaboration-list {
+      max-width: 780px;
+      padding-left: 1.25rem;
+    }
+
+    .professional-collaboration-list li {
+      margin-bottom: .75rem;
     }
 
     .professional-final-cta {
@@ -141,7 +157,7 @@
       justify-content: center;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1100px) {
       .referral-steps {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -152,6 +168,19 @@
       .professional-page-section,
       .professional-final-cta {
         padding: 4rem 0;
+      }
+
+      .professional-trust-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .professional-headshot {
+        max-width: 280px;
+      }
+
+      .professional-page-section .professional-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
 
       .referral-steps {
@@ -219,17 +248,12 @@
     <section class="professional-page-hero">
       <div class="container">
         <p class="section-eyebrow">For Professionals</p>
-        <h1 class="section-headline">A trusted referral partner for opioid use disorder treatment</h1>
+        <h1 class="section-headline">Specialized OUD Care That Works Alongside Yours</h1>
         <p class="section-intro">
-          Atlas Recovery provides a straightforward referral pathway for adults
-          seeking evidence-based outpatient treatment for opioid use disorder
-          through secure telehealth across Colorado.
+          Refer patients for evidence-based opioid use disorder treatment while
+          continuing the care and relationship you’ve already established.
         </p>
-        <p class="section-intro">
-          We contact referred patients promptly, explain the next steps clearly,
-          and—with appropriate authorization—coordinate with the professionals
-          involved in their care.
-        </p>
+        <p>Outpatient care for adults through secure telehealth across Colorado.</p>
         <div class="professional-page-actions">
           <a
             class="button button-primary"
@@ -237,7 +261,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Submit a Secure Referral
+            Refer a Patient
           </a>
           <a
             class="button button-secondary"
@@ -253,8 +277,62 @@
 
     <section class="professional-page-section">
       <div class="container">
+        <p class="section-eyebrow">A Personal Approach</p>
+        <div class="professional-trust-layout">
+          <img
+            class="professional-headshot"
+            src="/images/aaron-office2.jpeg"
+            alt="Aaron Jones, psychiatric nurse practitioner at Atlas Recovery"
+            width="623"
+            height="722"
+            decoding="async"
+          >
+          <div class="professional-trust-copy">
+            <h2 class="section-headline">Your Patient Is in Good Hands</h2>
+            <p>
+              <strong>Referring someone for addiction treatment requires trust.</strong>
+              Patients may feel apprehensive about discussing opioid use or starting medication.
+              At Atlas, they have time to tell their story, ask questions, and make
+              treatment decisions together with their clinician.
+            </p>
+            <p>
+              <strong>Aaron Jones, MSN, PMHNP-BC</strong>, is a Vanderbilt-trained psychiatric
+              nurse practitioner with experience caring for people with substance use
+              disorders across the continuum of care—from crisis response and medical
+              triage to community-based and outpatient treatment.
+            </p>
+            <p>
+              Our goal is simple: when you refer someone to us, we want you to feel
+              confident they'll receive the same care and respect they've come to expect from you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="professional-page-section">
+      <div class="container">
+        <p class="section-eyebrow">Connected Care</p>
+        <h2 class="section-headline">You Keep Your Patient. We Supplement Their Care.</h2>
+        <p class="section-intro">
+          Atlas provides focused OUD treatment and recovery-focused clinical support
+          alongside the care your patient already receives.
+        </p>
+        <ul class="professional-collaboration-list">
+          <li><strong>Existing care continues.</strong> Patients keep their therapist,
+            primary care clinician, intensive outpatient program (IOP), community supports, and other ongoing care.</li>
+          <li><strong>We focus on OUD treatment.</strong> Medication treatment and clinical
+            support complement the work you’re already doing.</li>
+          <li><strong>We coordinate when helpful.</strong> With patient authorization,
+            we work with the existing team so care stays connected.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="professional-page-section">
+      <div class="container">
         <p class="section-eyebrow">Referral Guidance</p>
-        <h2 class="section-headline">Who Atlas can help</h2>
+        <h2 class="section-headline">When to Refer to Atlas</h2>
         <p class="section-intro">
           Atlas provides outpatient opioid use disorder treatment for adults who can safely 
           receive care through 
@@ -265,11 +343,13 @@
           <div class="professional-card">
             <h3>Appropriate Referrals</h3>
             <ul>
-              <li>Evaluation for opioid use disorder or buprenorphine treatment</li>
-              <li>Initiation or continuation of outpatient buprenorphine treatment</li>
+              <li>Known or suspected opioid use disorder</li>
+              <li>Interest in starting buprenorphine/Suboxone</li>
+              <li>Ongoing medication for opioid use disorder (MOUD) management, including continuation of buprenorphine</li>
+              <li>Difficulty accessing OUD treatment locally</li>
+              <li>Telehealth OUD treatment while continuing care with you</li>
               <li>Transition from detoxification, residential treatment, hospitalization, or another prescriber</li>
               <li>Co-occurring psychiatric concerns that can be safely managed in an outpatient setting</li>
-              <li>Adults located in Colorado who can participate safely in telehealth care</li>
             </ul>
           </div>
 
@@ -285,74 +365,59 @@
           </div>
         </div>
 
-        <div class="professional-callout">
-          <p><strong>Designed to complement existing care.</strong></p>
-          <p>
-            Patients may continue with their existing therapist, primary care clinician, treatment program, or recovery supports. Atlas provides medication treatment and recovery-focused clinical support while collaborating with existing providers when appropriate.
-          </p>
-        </div>
       </div>
     </section>
 
     <section class="professional-page-section">
       <div class="container">
         <p class="section-eyebrow">What Happens Next</p>
-        <h2 class="section-headline">A referral process built around follow-through</h2>
+        <h2 class="section-headline">What Happens After You Refer</h2>
         <p class="section-intro">
-          A referral should lead to a clear next step. Atlas generally reviews
-          secure referrals within one business day during normal business hours.
+          We aim to contact new referrals within one business day during normal
+          business hours. With appropriate authorization, we can share relevant
+          updates and coordinate with you so you know what happens next.
         </p>
 
-        <div class="referral-steps">
-          <article class="referral-step">
-            <span class="referral-step-number">1</span>
-            <h3>Submit</h3>
-            <p>
-              Send the patient’s information through the secure professional
-              referral form.
-            </p>
-          </article>
-
-          <article class="referral-step">
-            <span class="referral-step-number">2</span>
-            <h3>Review</h3>
-            <p>
-              Atlas reviews the referral for clinical fit and identifies the
-              appropriate next step.
-            </p>
-          </article>
-
-          <article class="referral-step">
-            <span class="referral-step-number">3</span>
-            <h3>Contact</h3>
-            <p>
-              We contact the patient directly to discuss services, eligibility,
-              and scheduling.
-            </p>
-          </article>
-
-          <article class="referral-step">
-            <span class="referral-step-number">4</span>
-            <h3>Coordinate</h3>
-            <p>
-              With appropriate authorization, we communicate relevant outcomes
-              and coordinate ongoing care.
-            </p>
-          </article>
-        </div>
+        <ol class="referral-steps" role="list">
+          <li class="referral-step">
+            <span class="referral-step-number" aria-hidden="true">1</span>
+            <h3>You refer</h3>
+            <p>Send the patient’s information through the secure professional referral form.</p>
+          </li>
+          <li class="referral-step">
+            <span class="referral-step-number" aria-hidden="true">2</span>
+            <h3>We reach out</h3>
+            <p>We review the referral for clinical fit and contact the patient about services, eligibility, and scheduling.</p>
+          </li>
+          <li class="referral-step">
+            <span class="referral-step-number" aria-hidden="true">3</span>
+            <h3>We assess</h3>
+            <p>We listen to the patient’s needs and goals and assess whether outpatient telehealth care is appropriate.</p>
+          </li>
+          <li class="referral-step">
+            <span class="referral-step-number" aria-hidden="true">4</span>
+            <h3>We treat</h3>
+            <p>When appropriate, we develop a treatment plan together, including medication and ongoing follow-up.</p>
+          </li>
+          <li class="referral-step">
+            <span class="referral-step-number" aria-hidden="true">5</span>
+            <h3>We stay connected</h3>
+            <p>With appropriate authorization, we communicate relevant outcomes and coordinate ongoing care with you.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
     <section class="professional-page-section">
       <div class="container">
         <p class="section-eyebrow">Scope and Safety</p>
-        <h2 class="section-headline">When another level of care may be needed</h2>
+        <h2 class="section-headline">When Atlas May Not Be the Right Setting</h2>
         <p class="section-intro">
           Atlas is an outpatient telehealth practice and is not an emergency,
-          crisis, detoxification, residential, or inpatient service. Some patients
-          may need in-person assessment, medically managed withdrawal, emergency
-          evaluation, or a more intensive level of care before outpatient
-          telehealth treatment is appropriate.
+          crisis, detoxification, residential, or inpatient service. Patients who are
+          medically unstable may need in-person assessment, medically managed
+          withdrawal, emergency evaluation, or other higher-level care before
+          outpatient telehealth treatment is appropriate.
         </p>
         <p class="section-intro">
           If you are uncertain about fit, contact Atlas before referring. If a
@@ -396,7 +461,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Submit a Secure Referral
+            Refer a Patient
           </a>
           <a
             class="button button-secondary"
