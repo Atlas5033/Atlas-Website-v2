@@ -1056,7 +1056,8 @@ grid-template-columns:1fr;
   margin-bottom: 10px;
 }
 
-.provider-heading h3 {
+.provider-heading h3,
+.provider-heading h2 {
   margin: 0;
   color: var(--navy-dark);
   font-family:
@@ -1851,3 +1852,30 @@ grid-template-columns:1fr;
 @media (max-width: 700px) { .services-actions { width: 100%; } }
 
 .services-hero-button { margin-top: 1.75rem; }
+
+/* Homepage overview and About Atlas */
+.home-detail-link { display: inline-block; margin-top: 1rem; color: var(--navy); font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+.home-services .section-heading { margin-bottom: 0; }
+.home-provider, .about-page .about-section { padding-top: 5rem; }
+.home-provider .provider-grid { max-width: 960px; grid-template-columns: 260px minmax(0, 1fr); padding-bottom: 0; }
+.home-referral { padding: 3rem 0; background: #f8f7f3; text-align: center; }
+.home-referral h2 { margin: .5rem 0; color: var(--navy); font-family: Georgia, "Times New Roman", serif; font-size: 1.65rem; }
+.home-referral p:not(.section-eyebrow) { margin: .75rem auto 0; max-width: 680px; color: var(--muted-text); }
+.about-values .section-heading { margin-bottom: 3rem; }
+.about-values .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.about-workplace { max-width: 760px; margin: 2.5rem auto 0; color: var(--muted-text); line-height: 1.75; }
+@media (max-width: 900px) { .about-values .services-grid { grid-template-columns: 1fr; } }
+.about-page .provider-grid { padding-bottom: 0; }
+@media (max-width: 800px) { .home-provider .provider-grid { grid-template-columns: 1fr; } .home-provider .provider-photo { max-width: 300px; margin-inline: auto; } }
+
+/* Founder biography */
+.about-page .provider-copy { max-width: 68ch; }
+.founder-role { margin: .75rem 0 0; color: var(--muted-text); }
+.founder-bio p { margin: 0 0 1.5rem; color: var(--muted-text); font-size: 1rem; line-height: 1.8; }
+.founder-actions { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.founder-actions p { color: var(--muted-text); line-height: 1.75; }
+.founder-actions .home-detail-link { display: block; width: fit-content; }
+
+/* Decorative walking-together photo between homepage sections */
+.home-walking-band img { display: block; width: 100%; height: clamp(200px, 16.7vw, 240px); object-fit: cover; object-position: 58% center; }
+@media (max-width: 700px) { .home-walking-band img { height: 180px; } }
