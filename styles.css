@@ -291,7 +291,7 @@ a {
 .trust-list {
   margin-top: 38px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
   gap: 18px;
 }
 
@@ -1883,3 +1883,10 @@ grid-template-columns:1fr;
 /* Decorative walking-together photo between homepage sections */
 .home-walking-band img { display: block; width: 100%; height: clamp(200px, 16.7vw, 240px); object-fit: cover; object-position: 58% center; }
 @media (max-width: 700px) { .home-walking-band img { height: 180px; } }
+
+/* Make the clinician profile link recognizable in article bylines. */
+.article-author-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
